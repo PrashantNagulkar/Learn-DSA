@@ -46,18 +46,18 @@
 
 public class BasicsPrg {
     public static void main(String[] args) {
-        int[] arr = {10,20,30,60,80};
+        int [] arr = {10,20,40,50,60};
         int largest = Integer.MIN_VALUE;
-        int secondl = Integer.MIN_VALUE;
+        int slargest = Integer.MIN_VALUE;
 
-        for (int i = 0; i<arr.length;i++){
+        for (int i =0 ; i<arr.length; i++){
             if(arr[i] > largest){
-                secondl = largest;
+                slargest = largest;
                 largest = arr[i];
-            } else if (arr[i]>secondl && secondl!=largest ) {
-                secondl = arr[i];
+            } else if (arr[i] > slargest && arr[i] != largest){
+                slargest = arr[i];
             }
         }
-        System.out.println("second largest element is: "+secondl);
+        System.out.println(slargest);
     }
 }
